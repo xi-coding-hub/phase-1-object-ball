@@ -119,11 +119,31 @@ function gameObject(){
     return obj;
 }
 
+
+
 // Calling function with a new function
 function showTeamName(){
     let obj = gameObject();
-    const tm1 = obj.home["teamName"];
-    const tm2 = obj["away"]["teamName"];
-    console.log(tm1,tm2)
+    
+// Way 1 to access the data by using buid-in Object methods. 
+    // let keyArr = Object.keys(obj);
+    // for (let key of keyArr) {
+    //     if (key === "home"){
+    //         console.log (obj[key]["teamName"]);
+    //     } else if (key === "away") {
+
+    //         console.log (obj[key]["teamName"])
+    //     } else {
+    //         console.log("not in use")
+    //     }
+        
+    // }
+// below is the way 2 to show access the data
+    for (let key in obj) {
+        let value = obj.key["teamName"]
+        console.log(key, value)
+    }
+    
+    // console.log(tm1,tm2)
 
 }
