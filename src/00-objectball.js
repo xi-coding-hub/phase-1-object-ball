@@ -1,3 +1,4 @@
+// This function is to return object.
 function gameObject(){
     const obj = {
         home: {
@@ -116,4 +117,13 @@ function gameObject(){
         }
     }
     return obj;
+}
+
+// Calling function with a new function
+function showTeamName(){
+    let obj = gameObject();
+    const tm1 = obj.home["teamName"];
+    const tm2 = obj["away"]["teamName"];
+    console.log(tm1,tm2)
+
 }
