@@ -111,7 +111,9 @@ function gameObject(){
                     slamDunks:12
                 }
 
-        }
+            }
         // continue to build the object as per the request of lab
+        }
     }
+    return obj;
 }
